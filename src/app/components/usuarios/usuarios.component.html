@@ -172,6 +172,7 @@
     </div>
 
 </header>
+
 <body>
     <div class="ranking" id = "ranking">
         <div class="row">
@@ -196,6 +197,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            
                             <tr id = "{{'trr' + i}}" *ngFor="let establecimiento of establecimientos | filter:filterLista; index as i">
                                 <td (click)="abrir_popup(establecimiento.id)">{{establecimiento.name}}</td>
                                 <td>{{establecimiento.localidad}}</td>

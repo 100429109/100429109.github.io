@@ -34,6 +34,7 @@ export class UsuariosComponent implements OnInit {
   refrescar() {
     this.datasrv.getEstablecimientos().subscribe(data => {
       this.locales = data;
+      this.locales.sort((a,b) => b.valoracion - a.valoracion);
       console.log(this.locales);
     });
     this.datasrv.getComentarios().subscribe(data => {
