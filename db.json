@@ -1,7 +1,7 @@
 {
   "establecimientos": [
     {
-      "id": 0,
+      "id": "est0",
       "name": "El Olivo",
       "tipo": "Hosteleria",
       "calle": "Carr. de Galapagar, 49, 28270 Colmenarejo, Madrid",
@@ -10,7 +10,7 @@
       "valoracion": 4
     },
     {
-      "id": 1,
+      "id": "est1",
       "name": "Nuit",
       "tipo": "Pub/Discoteca",
       "calle": "C. de Orense, 10, 28020 Madrid",
@@ -19,7 +19,7 @@
       "valoracion": 3.5
     },
     {
-      "id": 2,
+      "id": "est2",
       "name": "Mercadona",
       "tipo": "Comercio",
       "calle": "Av. Juan Carlos I, s/n, 28400 Collado Villalba, Madrid",
@@ -28,7 +28,7 @@
       "valoracion": 4.5
     },
     {
-      "id": 3,
+      "id": "est3",
       "name": "Cervecería Restaurante Parada y Fonda",
       "tipo": "Hosteleria",
       "calle": "C. de Gómez del Campo, 13, 28280 El Escorial, Madrid",
@@ -37,7 +37,7 @@
       "valoracion": 2
     },
     {
-      "id": 4,
+      "id": "est4",
       "name": "Carniceria Mariano",
       "tipo": "Comercio",
       "calle": "C. Traspalacio, 22, 28294 Robledo de Chavela, Madrid",
@@ -46,7 +46,7 @@
       "valoracion": 5
     },
     {
-      "id": 5,
+      "id": "est5",
       "name": "La Perla",
       "tipo": "Restaurante",
       "calle": "El Gorronal",
@@ -57,106 +57,10 @@
   ],
   "comentarios": [
     {
-      "id": 1,
-      "establecimientoId": 1,
-      "usuario": "sofi",
-      "comentario": "Vaya mierda sitio"
-    },
-    {
-      "id": 2,
-      "establecimientoId": 3,
-      "usuario": "sara",
-      "comentario": "El mejor"
-    },
-    {
-      "id": 3,
-      "establecimientoId": 3,
-      "usuario": "alba",
-      "comentario": "chido"
-    },
-    {
-      "id": 4,
-      "establecimientoId": 6,
-      "usuario": "cesar",
-      "comentario": "prueba"
-    },
-    {
-      "establecimientoId": 7,
-      "usuario": "cesar",
-      "comentario": "prueba2",
-      "id": 5
-    },
-    {
-      "establecimientoId": 2,
-      "usuario": "sofi",
-      "comentario": "prueba",
-      "id": 6
-    },
-    {
-      "establecimientoId": 5,
-      "usuario": "alba",
-      "comentario": "prueba",
-      "id": 7
-    },
-    {
-      "establecimientoId": 7,
-      "usuario": "sara",
-      "comentario": "prueba",
-      "id": 8
-    },
-    {
-      "establecimientoId": 7,
+      "establecimientoId": "est1",
       "usuario": "sara",
       "comentario": "hola",
-      "id": 9
-    },
-    {
-      "establecimientoId": 6,
-      "usuario": "sara",
-      "comentario": "malo",
-      "id": 10
-    },
-    {
-      "establecimientoId": 1,
-      "usuario": "sara",
-      "comentario": "malo",
-      "id": 11
-    },
-    {
-      "establecimientoId": 1,
-      "usuario": "cesar",
-      "comentario": "malo 3",
-      "id": 12
-    },
-    {
-      "establecimientoId": 3,
-      "usuario": "cesar",
-      "comentario": "bien",
-      "id": 13
-    },
-    {
-      "establecimientoId": 3,
-      "usuario": "alba",
-      "comentario": "hhh",
-      "id": 14
-    },
-    {
-      "establecimientoId": 1,
-      "usuario": "kike",
-      "comentario": "hola",
-      "id": 15
-    },
-    {
-      "establecimientoId": 2,
-      "usuario": "sara",
-      "comentario": "hola",
-      "id": 16
-    },
-    {
-      "establecimientoId": 0,
-      "usuario": "sara",
-      "comentario": "añsdhads",
-      "id": 17
+      "id": 1
     }
   ]
 }
