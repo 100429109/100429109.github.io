@@ -56,11 +56,5 @@
     }
   ],
   "comentarios": [
-    {
-      "establecimientoId": "est1",
-      "usuario": "sara",
-      "comentario": "hola",
-      "id": 1
-    }
   ]
 }

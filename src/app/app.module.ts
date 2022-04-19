@@ -7,7 +7,7 @@ import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './pipes/filter.pipe';
 import { HttpClientModule } from "@angular/common/http";
-
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,10 @@ import { HttpClientModule } from "@angular/common/http";
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAyh-MCZk-az-hZlybnOyzkMvZigycO898'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

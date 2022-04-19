@@ -1,323 +1,328 @@
-    <!--Pop Up de login-->
-    <div id="organizador1" class="organizador org_hid">
-        <div id="cont_log" class="contenedor-login">
-            <form class="form" id="login">
-                <button id=boton_cerrar_form type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
-                <h1 class="titulo-login">LOGIN</h1>
-                <div class="form__mensaje form__mensaje_error"></div>
-                <div class="form__input-total">
-                    <label for="login_nombre">Nombre de usuario</label>
-                    <input type="text" class="form__input " id="login_nombre" placeholder="Nombre usuario">
-                    <p id="nombre_incorrecto" class="form__input-mensaje-err"></p>
-                </div>
-                <div class="form__input-total">
-                    <label for="login_contrasena">Contraseña</label>
-                    <input type="password" class="form__input form__input--error" id="login_contrasena" placeholder="Contraseña">
-                    <p id="contrasena_incorrecta" class="form__input-mensaje-err"></p>
-                </div>
-                <button id="inicio_sesion" class="form__boton" type="submit" (click)="iniciar_sesion($event)">INICIAR SESION</button>
-                <p class="form__pregunta">
-                    <a href="#" class="form__link">Ha olvidado su contraseña?</a>
-                </p>
-            </form>
-        </div>
-    </div>
-
-    <!--Pop Up de registrar usuario-->
-    <div id="organizador2" class="organizador org_hid">
-        <div id="cont_sign" class="contenedor-login">
-            <form class="form" id="sign_up">
-                <button id=boton_cerrar_sign type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
-                <h1 class="titulo-login">SIGN IN</h1>
-                <h4>Informacion de la cuenta</h4>
-                <div id = "err" class="form__mensaje form__mensaje_error"></div>
-                <div class="form__input-total">
-                    <label for="n_username">Nombre de usuario</label>
-                    <input type="text" class="form__input" id="n_username" placeholder="Nombre usuario">
-                    <p id="err_usuario" class="form__input-mensaje-err"></p>
-                </div>
-                <div class="form__input-total">
-                    <label for="n_contraseña">Contraseña</label>
-                    <input type="password" class="form__input form__input--error" id="n_contraseña" placeholder="Contraseña">
-                    <p id="err_contraseña" class="form__input-mensaje-err"></p>
-                </div>
-                <h4>Informacion personal</h4>
-                <div class="form__input-total">
-                    <label for="n_nombre">Nombre</label>
-                    <input type="text" class="form__input" id="n_nombre" placeholder="Nombre">
-                    <p id="err_nombre" class="form__input-mensaje-err"></p>
-                </div>
-                <div class="form__input-total">
-                    <label for="n_mail">Email</label>
-                    <input type="text" class="form__input" id="n_mail" placeholder="Email">
-                    <p id="err_mail" class="form__input-mensaje-err"></p>
-                </div>
-                <div class="botones_validacion">
-                    <button id = "registrar" class="form__boton" type="submit" (click)="registro($event)">REGISTRAR</button>
-                    <button id = "boton_borrar_registrar" class="form__boton" type="reset" >BORRAR</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!--Pop Up de cerrar sesion-->
-    <div id="organizador3" class="organizador org_hid">
-        <div id="cont_log3" class="contenedor-login">
-            <form class="form" id="sign_off">
-                <button id=boton_cerrar_form2 type="reset" (click)="cerrar_form3($event.target)" class="boton_cerrar_form">Cerrar</button>
-                <h1 class="titulo-login">SIGN OFF</h1>
-                <p class="form__pregunta">
-                    ¿Está seguro de que quiere cerrar sesión?
-                </p>
-                <div class="botones_validacion">
-                    <button id="cerrar_sesion" class="form__boton" type="reset" (click)="cerrar_sesion()" >SI</button>
-                    <button class="form__boton" type="reset" (click)="cerrar_form2($event.target)">NO</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!--Pop Up de menu de info-->
-
-    <div id="organizador4" class="organizador org_hid">
-        <div class="contenedor-login" id="miPerfil-desplegable">
-            <button id=boton_cerrar_menu_perfil type="reset" (click)="cerrar_menu_perfil()" class="boton_cerrar_form">Cerrar</button>
-            <div class= "perfil-foto">
-                <img src="/assets/images/fotoperfil.jpeg" id="foto-muestra" alt="Foto" width="80" height="80">
-                <label for="fotoperfil" id="Botonsubir">Agregar foto</label>
-                <input type="file" id="fotoperfil">
+<!--Pop Up de login-->
+<div id="organizador1" class="organizador org_hid">
+    <div id="cont_log" class="contenedor-login">
+        <form class="form" id="login">
+            <button id=boton_cerrar_form type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
+            <h1 class="titulo-login">LOGIN</h1>
+            <div class="form_mensaje form_mensaje_error"></div>
+            <div class="form__input-total">
+                <label for="login_nombre">Nombre de usuario</label>
+                <input type="text" class="form__input " id="login_nombre" placeholder="Nombre usuario">
+                <p id="nombre_incorrecto" class="form__input-mensaje-err"></p>
             </div>
+            <div class="form__input-total">
+                <label for="login_contrasena">Contraseña</label>
+                <input type="password" class="form_input form_input--error" id="login_contrasena" placeholder="Contraseña">
+                <p id="contrasena_incorrecta" class="form__input-mensaje-err"></p>
+            </div>
+            <button id="inicio_sesion" class="form__boton" type="submit" (click)="iniciar_sesion($event)">INICIAR SESION</button>
+            <p class="form__pregunta">
+                <a href="#" class="form__link">Ha olvidado su contraseña?</a>
+            </p>
+        </form>
+    </div>
+</div>
 
-            <div class="cuerpo_perfil">
-                <ng-container *ngIf="usuario_actual != -1">  
-                    <h1 id="titulo-login">{{usuario_actual.name}}</h1>
+<!--Pop Up de registrar usuario-->
+<div id="organizador2" class="organizador org_hid">
+    <div id="cont_sign" class="contenedor-login">
+        <form class="form" id="sign_up">
+            <button id=boton_cerrar_sign type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
+            <h1 class="titulo-login">SIGN IN</h1>
+            <h4>Informacion de la cuenta</h4>
+            <div id = "err" class="form_mensaje form_mensaje_error"></div>
+            <div class="form__input-total">
+                <label for="n_username">Nombre de usuario</label>
+                <input type="text" class="form__input" id="n_username" placeholder="Nombre usuario">
+                <p id="err_usuario" class="form__input-mensaje-err"></p>
+            </div>
+            <div class="form__input-total">
+                <label for="n_contraseña">Contraseña</label>
+                <input type="password" class="form_input form_input--error" id="n_contraseña" placeholder="Contraseña">
+                <p id="err_contraseña" class="form__input-mensaje-err"></p>
+            </div>
+            <h4>Informacion personal</h4>
+            <div class="form__input-total">
+                <label for="n_nombre">Nombre</label>
+                <input type="text" class="form__input" id="n_nombre" placeholder="Nombre">
+                <p id="err_nombre" class="form__input-mensaje-err"></p>
+            </div>
+            <div class="form__input-total">
+                <label for="n_mail">Email</label>
+                <input type="text" class="form__input" id="n_mail" placeholder="Email">
+                <p id="err_mail" class="form__input-mensaje-err"></p>
+            </div>
+            <div class="botones_validacion">
+                <button id = "registrar" class="form__boton" type="submit" (click)="registro($event)">REGISTRAR</button>
+                <button id = "boton_borrar_registrar" class="form__boton" type="reset" >BORRAR</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--Pop Up de cerrar sesion-->
+<div id="organizador3" class="organizador org_hid">
+    <div id="cont_log3" class="contenedor-login">
+        <form class="form" id="sign_off">
+            <button id=boton_cerrar_form2 type="reset" (click)="cerrar_form3($event.target)" class="boton_cerrar_form">Cerrar</button>
+            <h1 class="titulo-login">SIGN OFF</h1>
+            <p class="form__pregunta">
+                ¿Está seguro de que quiere cerrar sesión?
+            </p>
+            <div class="botones_validacion">
+                <button id="cerrar_sesion" class="form__boton" type="reset" (click)="cerrar_sesion()" >SI</button>
+                <button class="form__boton" type="reset" (click)="cerrar_form2($event.target)">NO</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--Pop Up de menu de info-->
+
+<div id="organizador4" class="organizador org_hid">
+    <div class="contenedor-login" id="miPerfil-desplegable">
+        <button id=boton_cerrar_menu_perfil type="reset" (click)="cerrar_menu_perfil()" class="boton_cerrar_form">Cerrar</button>
+        <div class= "perfil-foto">
+            <img src="/assets/images/fotoperfil.jpeg" id="foto-muestra" alt="Foto" width="80" height="80">
+            <label for="fotoperfil" id="Botonsubir">Agregar foto</label>
+            <input type="file" id="fotoperfil">
+        </div>
+
+        <div class="cuerpo_perfil">
+            <ng-container *ngIf="usuario_actual != -1">  
+                <h1 id="titulo-login">{{usuario_actual.name}}</h1>
+            </ng-container>
+            <ng-container *ngIf="usuario_actual == -1">  
+                <h1 id="titulo-login"></h1>
+            </ng-container>
+
+            <ul id="lista-perfil">
+                <li id="mi-perfil-menu"><a href="#" (click)="perfil()">Mi Perfil</a></li>
+                <li id="home-perfil"><a href="#" (click)="comentarios()">Mis Comentarios</a></li>
+                <li id="sg_o" ><a href="#" (click)="log_out()">Cerrar Sesión</a></li>
+            </ul>    
+        </div>
+    </div>
+</div>
+
+<!--Pop Up de menu de mi perfil-->
+<div id="organizador5" class="organizador org_hid">
+    <div id="cont_log5" class="contenedor-login">
+        <div>
+            <button id=boton_cerrar_menu_perfil2 type="reset" (click)="cerrar_menu_perfil2()" class="boton_cerrar_form">Cerrar</button>
+        </div>
+        <div>
+            <ul class="lista_principal"*ngFor="let item of usuario_actual | keyvalue">
+                <ng-container *ngIf=" item.key == 'name'"> 
+                    <li>
+                        Nombre: {{item.value}}
+                    </li>
                 </ng-container>
-                <ng-container *ngIf="usuario_actual == -1">  
-                    <h1 id="titulo-login"></h1>
+                <ng-container *ngIf=" item.key == 'email'"> 
+                    <li>
+                        Correo electronico: {{item.value}}
+                    </li>
                 </ng-container>
-
-                <ul id="lista-perfil">
-                    <li id="mi-perfil-menu"><a href="#" (click)="perfil()">Mi Perfil</a></li>
-                    <li id="home-perfil"><a href="#" (click)="comentarios()">Mis Comentarios</a></li>
-                    <li id="sg_o" ><a href="#" (click)="log_out()">Cerrar Sesión</a></li>
-                </ul>    
-            </div>
+            </ul>
         </div>
     </div>
+</div>
 
-    <!--Pop Up de menu de mi perfil-->
-    <div id="organizador5" class="organizador org_hid">
-        <div id="cont_log5" class="contenedor-login">
-            <div>
-                <button id=boton_cerrar_menu_perfil2 type="reset" (click)="cerrar_menu_perfil2()" class="boton_cerrar_form">Cerrar</button>
-            </div>
-            <div>
-                <ul class="lista_principal"*ngFor="let item of usuario_actual | keyvalue">
-                    <ng-container *ngIf=" item.key == 'name'"> 
-                        <li>
-                            Nombre: {{item.value}}
-                        </li>
-                    </ng-container>
-                    <ng-container *ngIf=" item.key == 'email'"> 
-                        <li>
-                            Correo electronico: {{item.value}}
-                        </li>
-                    </ng-container>
-                </ul>
-            </div>
+<!--Pop Up de mis comentarios-->
+
+<div id="organizador6" class="organizador org_hid">
+    <div id="cont_log4" class="contenedor-login">
+        <div>
+            <button id=boton_cerrar_menu_perfil3 type="reset" (click)="cerrar_menu_perfil3()" class="boton_cerrar_form">Cerrar</button>
         </div>
     </div>
-
-    <!--Pop Up de mis comentarios-->
-
-    <div id="organizador6" class="organizador org_hid">
-        <div id="cont_log4" class="contenedor-login">
-            <div>
-                <button id=boton_cerrar_menu_perfil3 type="reset" (click)="cerrar_menu_perfil3()" class="boton_cerrar_form">Cerrar</button>
-            </div>
-        </div>
-    </div>
+</div>
 
 
 
 <header>
-    <div class="logo" id="inicio"><a href="#inicio">Nuestra App</a></div>
+<div class="logo" id="inicio"><a href="#inicio">Nuestra App</a></div>
 
-    <!--Foto arriba a la derecha con numbre de usuario-->
-    <div class="miPerfil" id="miPerfil" (click)="abrir_perfil()">
-        <img src="/assets/images/fotoperfil.jpeg" id="foto-muestra" alt="Foto" width="60" height="60">
-        <ng-container *ngIf="usuario_actual != -1">  
-            <h1 id="texto_perfil">{{usuario_actual.name}}</h1>
-        </ng-container>
-        <ng-container *ngIf="usuario_actual == -1">  
-            <h1 id="texto_perfil"></h1>
-        </ng-container>
-    </div>
+<!--Foto arriba a la derecha con numbre de usuario-->
+<div class="miPerfil" id="miPerfil" (click)="abrir_perfil()">
+    <img src="/assets/images/fotoperfil.jpeg" id="foto-muestra" alt="Foto" width="60" height="60">
+    <ng-container *ngIf="usuario_actual != -1">  
+        <h1 id="texto_perfil">{{usuario_actual.name}}</h1>
+    </ng-container>
+    <ng-container *ngIf="usuario_actual == -1">  
+        <h1 id="texto_perfil"></h1>
+    </ng-container>
+</div>
 
-    <!--Links de cabecera-->
-    <div class="menu-bar">
-        <ul id="lista1">
-            <li><a href="#inicio">Inicio</a> </li>
-            <li><a href="#ranking">Ranking</a></li>
-            <li id="mapa"><a href="#mapa">Mapa</a> </li>
-        </ul>
-    </div>
+<!--Links de cabecera-->
+<div class="menu-bar">
+    <ul id="lista1">
+        <li><a href="#inicio">Inicio</a> </li>
+        <li><a href="#ranking">Ranking</a></li>
+    </ul>
+</div>
 
-    <!--Botones de login y sign-up-->
-    <div class="inicio-sesion">
-        <ul id="lista2">
-            <li><a id="log" href="#" (click)="login()">Login</a> </li>
-            <li><a id="sg" href="#" (click)="sign_up()">Sign up</a> </li>
-        </ul>
-    </div>
+<!--Botones de login y sign-up-->
+<div class="inicio-sesion">
+    <ul id="lista2">
+        <li><a id="log" href="#" (click)="login()">Login</a> </li>
+        <li><a id="sg" href="#" (click)="sign_up()">Sign up</a> </li>
+    </ul>
+</div>
 
 </header>
 
 <body>
-    <div class="ranking" id = "ranking">
+    <div class="container">
+        <div class="form-group">
+            <input type="text" class="form-control" name = "filterLista" placeholder="(Busqueda por localidad)" [(ngModel)]="filterLista">
+        </div>
+    </div>
+<div class="ranking" id = "ranking">
+    <div *ngIf="getEstablecimientos$() | async as establecimientos">
         <div class="row">
             <div class="col">
-                <div class="form-group">
-                    <input type="text" class="form-control" name = "filterLista" placeholder="(Busqueda por localidad)" [(ngModel)]="filterLista">
-                </div>
-            </div> 
-        </div>
-        <div *ngIf="getEstablecimientos$() | async as establecimientos">
-            <div class="row">
-                <div class="col">
-                    <table class="table table-striped" id = "ranking_establecimientos">
-                        <thead>
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Localidad</th>
-                                <th>Puntuacion</th>
-                                <th>Comentarios</th>
-                                <th></th>
+                <table class="table table-striped" id = "ranking_establecimientos">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Localidad</th>
+                            <th>Puntuacion</th>
+                            <th>Comentarios</th>
+                            <th></th>
 
-                            </tr>
-                        </thead>
-                        <tbody>
-                            
-                            <tr id = "{{'trr' + i}}" *ngFor="let establecimiento of establecimientos | filter:filterLista; index as i">
-                                <td (click)="abrir_popup(establecimiento.id)">{{establecimiento.name}}</td>
-                                <td>{{establecimiento.localidad}}</td>
-                                <td>{{establecimiento.valoracion}}</td>
-                                <td>
-                                    <div *ngIf="getComentarios$(establecimiento.id) | async as coms">
-                                        <ul *ngFor="let com of coms; index as i">
-                                            <li>{{com.usuario}}: {{com.comentario}}</li>
-                                        </ul>
-                                    </div>    
-                                </td>
-                                <td><button  (click)="clickCrearComentario(establecimiento.id)">Añadir comentario</button></td> 
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr id = "{{'trr' + i}}" *ngFor="let establecimiento of establecimientos | filter:filterLista; index as i">
+                            <td (click)="abrir_popup(establecimiento.id)">{{establecimiento.name}}</td>
+                            <td>{{establecimiento.localidad}}</td>
+                            <td>{{establecimiento.valoracion}}</td>
+                            <td>
+                                <div *ngIf="getComentarios$(establecimiento.id) | async as coms">
+                                    <ul *ngFor="let com of coms; index as i">
+                                        <li>{{com.usuario}}: {{com.comentario}}</li>
+                                    </ul>
+                                </div>    
+                            </td>
+                            <td><button  (click)="clickCrearComentario(establecimiento.id)">Añadir comentario</button></td> 
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </div>    
-    </div>
-    <div id="modal_cont0"class="modal-container modal_hid" >
-        <div id="modal0" class="modal">
-            <div>
-                <button id=boton_cerrar_form1 type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
-            </div>
-                <h1> Bar El Olivo</h1>
-                <br>
-                <img src="assets/images/olivo.webp" class = "est_popup" alt="Olivo" width=30%>
-                <p><br>Olea europaea, llamado comúnmente olivo, olivera o aceituno, es un árbol pequeño perennifolio, longevo, que puede alcanzar hasta 15 m de altura, con copa ancha y tronco grueso, de aspecto retorcido. Su corteza es finamente fisurada, de color gris o plateado. Tiene las hojas opuestas, de 2 a 8 cm de largo, lanceoladas con el ápice ligeramente puntiagudo, enteras, coriáceas, glabras y verdes grises oscuras por el haz, más pálidas y densamente escamosas por el envés, más o menos sésiles o con un peciolo muy corto.
-                </p>
-                <p>SECCIÓN DE COMENTARIOS</p><br><br><br><br><br>
-            </div>
-    </div>
-    <div id="modal_cont1"class="modal-container modal_hid" >
-        <div id="modal1" class="modal">
-            <div>
-                <button id=boton_cerrar_form1 type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
-            </div>
-            <h1> Discoteca La Nuit</h1>
-            <br>
-            <img src="assets/images/nuit.jpg" class = "est_popup" alt="nuit" width=30%>
-            <p><br>eñroif nrifernfelkrjgfsd fvsdlfkjsdlkrfje kj
-                podifgeoirfnerf poefnaòif as`foalsflaehrfkajshdfgaksjdhfgkasjhdfgaksjdhfgaksjhdfgaksjhdf kjhsdgf kjhasdgf kajshgf 
-                asdfiuagsdfui
-                asdifagsfd
-                qefigsfd
-                asdfñiasgf
-                asdfñjahsdf
-                asñfdiafd
-                asñdfoasf
-                asñoifa
-                faofa
-                rfhrf
-                werñkjabfa
-                añsojdghñserge
-                añorihfñeoirfhñwe
-                iasdcsd `soidv sd`voisnd jdirrhv fdfiubdr fbeurifebf erifuebriferbgdskvd
-                aeorigeorifpeoirfhpwoeirfeorif feprf
-            </p>
-            <p>SECCIÓN DE COMENTARIOS</p><br><br><br><br><br>
         </div>
+    </div>    
+</div>
+<div id="modal_cont0"class="modal-container modal_hid" >
+    <div id="modal0" class="modal">
+        <div>
+            <button id=boton_cerrar_form1 type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
+        </div>
+            <h1> Bar El Olivo</h1>
+            <br>
+            <img src="assets/images/olivo.jpg" class = "est_popup" alt="Olivo" width=30%>
+            <br><h4>Valoracion: 4</h4>
+                <h4>Tipo:</h4> Hosteleria<br>
+                <h4>Calle:</h4> Carr. de Galapagar, 49, 28270 Colmenarejo, Madrid<br>
+                <h4>Localidad:</h4> Colmenarejo<br><br>
+                <h4>Descrición:</h4>Este bar cuenta con una rampa para el acceso por la puerta principal. Todas las puertas permiten el paso de una 
+                silla de ruedas. Además los baños están habilitados y no se requiere cambiar de planta para acceder a ellos.
+            <h3>SECCIÓN DE COMENTARIOS</h3><br><br><br><br><br>
+        </div>
+</div>
+<div id="modal_cont1"class="modal-container modal_hid" >
+    <div id="modal1" class="modal">
+        <div>
+            <button id=boton_cerrar_form1 type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
+        </div>
+        <h1> Discoteca La Nuit</h1>
+        <br>
+        <img src="assets/images/nuit.jpg" class = "est_popup" alt="nuit" width=30%>
+        <br><h4>Valoracion: 3.5</h4>
+        <h4>Tipo:</h4> Pub/Discoteca<br>
+        <h4>Calle:</h4>C. de Orense, 10, 28020 Madrid<br>
+        <h4>Localidad:</h4> Madrid<br><br>
+        <h4>Descrición:</h4>Discoteca con buen acceso y un baño habilitado para personas con movilidad reducida.
+        
+        <h3>SECCIÓN DE COMENTARIOS</h3><br><br><br><br><br>
     </div>
+</div>
 
-    <div id="modal_cont2"class="modal-container modal_hid" >
-        <div id="modal2" class="modal">
-            <div>
-                <button id=boton_cerrar_form1 type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
-            </div>
-            <h1> Mercadona </h1>
-            <br>
-            <img src="assets/images/mercadona.jpg" class = "est_popup" alt="mercadona" width=30%>
-            <p><br>podifgeoirfnerf poefnaòif as`foiasdcsd `soidv sd`voisnd jdirrhv fdfiubdr fbeurifebf erifuebriferbgdskvd
-                aeorigeorifpeoirfhpwoeirfeorif feprf
-            </p>
-            <p>SECCIÓN DE COMENTARIOS</p><br><br><br><br><br>
+<div id="modal_cont2"class="modal-container modal_hid" >
+    <div id="modal2" class="modal">
+        <div>
+            <button id=boton_cerrar_form1 type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
         </div>
+        <h1> Mercadona </h1>
+        <br>
+        <img src="assets/images/mercadona.jpg" class = "est_popup" alt="mercadona" width=30%>
+        <br><h4>Valoracion: 4.5</h4>
+        <h4>Tipo:</h4> Comercio<br>
+        <h4>Calle:</h4>Av. Juan Carlos I, s/n, 28400 Collado Villalba, Madrid<br>
+        <h4>Localidad:</h4> Collado Villalba<br><br>
+        <h4>Descrición:</h4>Supermercado con ascensores y pasillos amplios. Correctamente habilitado para personas con movilidad reducida.
+        
+        <h3>SECCIÓN DE COMENTARIOS</h3><br><br><br><br><br>
     </div>
-    <div id="modal_cont3"class="modal-container modal_hid" >
-        <div id="modal3" class="modal">
-            <div>
-                <button id=boton_cerrar_form1 type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
-            </div>
-            <h1> Cervecería Restaurante Parada y Fonda </h1>
-            <br>
-            <img src="assets/images/ParadayFonda.jpg" class = "est_popup" alt="pyf" width=30%>
-            <p><br>podifgeoirfnerf poefnaòif as`foiasdcsd `soidv sd`voisnd jdirrhv fdfiubdr fbeurifebf erifuebriferbgdskvd
-                aeorigeorifpeoirfhpwoeirfeorif feprf
-            </p>
-            <p>SECCIÓN DE COMENTARIOS</p><br><br><br><br><br>
+</div>
+<div id="modal_cont3"class="modal-container modal_hid" >
+    <div id="modal3" class="modal">
+        <div>
+            <button id=boton_cerrar_form1 type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
         </div>
+        <h1> Cervecería Restaurante Parada y Fonda </h1>
+        <br>
+        <img src="assets/images/ParadayFonda.jpg" class = "est_popup" alt="pyf" width=30%>
+        <br><h4>Valoracion: 2</h4>
+        <h4>Tipo:</h4> Hosteleria<br>
+        <h4>Calle:</h4>C. de Gómez del Campo, 13, 28280 El Escorial, Madrid<br>
+        <h4>Localidad:</h4>El Escorial<br><br>
+        <h4>Descrición:</h4>Buen acceso, su interior medianamente espacioso. No posee baño habilitado para personas con movilidad reducida
+        
+        <h3>SECCIÓN DE COMENTARIOS</h3><br><br><br><br><br>
     </div>
-    <div id="modal_cont4"class="modal-container modal_hid" >
-        <div id="modal4" class="modal">
-            <div>
-                <button id=boton_cerrar_form1 type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
-            </div>
-            <h1> Carnicería Mariano </h1>
-            <br>
-            <img src="assets/images/R.jpg" class = "est_popup" alt="cm" width=30%>
-            <p><br>podifgeoirfnerf poefnaòif as`foalsflaehrfkajshdfgaksjdhfgkasjhdfgaksjdhfgaksjhdfgaksjhdf kjhsdgf kjhasdgf kajshgf 
-                asdfiuagsdfui
-            </p>
-            <p>SECCIÓN DE COMENTARIOS</p><br><br><br><br><br>
+</div>
+<div id="modal_cont4"class="modal-container modal_hid" >
+    <div id="modal4" class="modal">
+        <div>
+            <button id=boton_cerrar_form1 type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
         </div>
+        <h1> Carnicería Mariano </h1>
+        <br>
+        <img src="assets/images/R.jpg" class = "est_popup" alt="cm" width=30%>
+        <br><h4>Valoracion: 5</h4>
+        <h4>Tipo:</h4>Comercio<br>
+        <h4>Calle:</h4>C. Traspalacio, 22, 28294 Robledo de Chavela, Madrid<br>
+        <h4>Localidad:</h4>Robledo de Chavela<br><br>
+        <h4>Descrición:</h4>Carnicería con rampa en el acceso y puertas automáticas.
+        
+        <h3>SECCIÓN DE COMENTARIOS</h3><br><br><br><br><br>
     </div>
-    
-    <div id="modal_cont5"class="modal-container modal_hid" >
-        <div id="modal5" class="modal">
-            <div>
-                <button id=boton_cerrar_form1 type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
-            </div>
-            <h1> La Perla</h1>
-            <br>
-            <img src="assets/images/perla.jpg" class = "est_popup" alt="La Perla" width=30%>
-            <p><br>podifgeoirfnerf poefnaòif as`foiasdcsd `soidv sd`voisnd jdirrhv fdfiubdr fbeurifebf erifuebriferbgdskvd
-                aeorigeorifpeoirfhpwoeirfeorif feprf
-            </p>
-            <p>SECCIÓN DE COMENTARIOS</p><br><br><br><br><br>
+</div>
+
+<div id="modal_cont5"class="modal-container modal_hid" >
+    <div id="modal5" class="modal">
+        <div>
+            <button id=boton_cerrar_form1 type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
         </div>
+        <h1> La Perla</h1>
+        <br>
+        <img src="assets/images/laperla.jpg" class = "est_popup" alt="La Perla" width=30%>
+        <br><h4>Valoracion: 9</h4>
+        <h4>Tipo:</h4>Restaurante<br>
+        <h4>Calle:</h4>El Gorronal<br>
+        <h4>Localidad:</h4>Collado Villalba<br><br>
+        <h4>Descrición:</h4>podifgeoirfnerf poefnaòif as`foiasdcsd `soidv sd`voisnd jdirrhv fdfiubdr fbeurifebf erifuebriferbgdskvd
+            aeorigeorifpeoirfhpwoeirfeorif feprf
+        
+        <h3>SECCIÓN DE COMENTARIOS</h3>><br><br><br><br><br>
     </div>
-    <div>
-        <input type="text" class="form-control" name = "comentario" placeholder="(Comentario)" [(ngModel)]="inputComentario">
-    </div>
+</div>
+<div class="comentario">
+    <br>
+    <br>
+    <input type="text" class="form-control" name = "comentario" placeholder="(Comentario)" [(ngModel)]="inputComentario">
+</div>
+<br>
 </body>

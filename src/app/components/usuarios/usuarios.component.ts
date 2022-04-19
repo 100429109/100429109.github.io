@@ -5,7 +5,7 @@ import { comentario } from '../../model/model.interface';
 import { Observable, of } from "rxjs";
 //import nuevos_usuarios from '../../datos_json/datos_nuevos_usuarios.json';
 //import * as fs from 'fs';
-
+var loged =false
 @Component({
   selector: 'app-usuarios',
   templateUrl: './usuarios.component.html',
@@ -52,11 +52,16 @@ export class UsuariosComponent implements OnInit {
   }
 
   clickCrearComentario(establecimientoId: any) {
-    this.datasrv.crearComentario(establecimientoId, "sara", this.inputComentario).subscribe(data => {
+    if (loged){
+    this.datasrv.crearComentario(establecimientoId, this.usuario_actual.name, this.inputComentario).subscribe(data => {
       this.comemtar = data;
       console.log(this.comemtar);
       this.refrescar();
     });
+  }
+  else{
+    alert("No estás logado. Debes registrarte para comentar")
+  }
   }
 
 /*
@@ -118,6 +123,7 @@ export class UsuariosComponent implements OnInit {
     document.getElementById('organizador3')!.style.display = 'none';
     document.getElementById("miPerfil")!.style.display="none";
     document.getElementById("lista2")!.style.display="flex";
+    loged = false
   }
 
   iniciar_sesion(target:any){
@@ -180,6 +186,7 @@ export class UsuariosComponent implements OnInit {
         resetForm.reset();
       }
     }
+    loged = true;
   }
   // ESTO SERIA MAS O MENOS COMO HACER LO DEL LOCAL STORAGE PERO ES MAS COMODO USAR LAS LISTAS Y YA TA
   //setUsuarios(datos: any){
@@ -217,52 +224,24 @@ export class UsuariosComponent implements OnInit {
 
   }
 
-abrir_popup(id:number) {
-  if (id==0){
+abrir_popup(id:string) {
+  if (id=="est0"){
     document.getElementById("modal_cont0")!.style.display="flex"
   }
-  if (id==1){
+  if (id=="est1"){
     document.getElementById("modal_cont1")!.style.display="flex"
   }
-  if (id==2){
+  if (id=="est2"){
     document.getElementById("modal_cont2")!.style.display="flex"
   }
-  if (id==3){
+  if (id=="est3"){
     document.getElementById("modal_cont3")!.style.display="flex"
   }
-  if (id==4){
+  if (id=="est4"){
     document.getElementById("modal_cont4")!.style.display="flex"
   }
-  if (id==5){
+  if (id=="est5"){
     document.getElementById("modal_cont5")!.style.display="flex"
   }
-}
-
-
-cerrar_popup(target: any, id:number){
-if (id==0){
-  target.parentNode.parentNode.parentNode!.style.display = 'none';
-  document.getElementById("modal_cont0")!.style.display="none";
-}
-if (id==1){
-  target.parentNode.parentNode.parentNode!.style.display = 'none';
-  document.getElementById("modal_cont1")!.style.display="none";
-}
-if (id==2){
-  target.parentNode.parentNode.parentNode!.style.display = 'none';
-  document.getElementById("modal_cont2")!.style.display="none";
-}
-if (id==3){
-  target.parentNode.parentNode.parentNode!.style.display = 'none';
-  document.getElementById("modal_cont3")!.style.display="none";
-}
-if (id==4){
-  target.parentNode.parentNode.parentNode!.style.display = 'none';
-  document.getElementById("modal_cont4")!.style.display="none";
-}
-if (id==5){
-  target.parentNode.parentNode.parentNode!.style.display = 'none';
-  document.getElementById("modal_cont4")!.style.display="none";
-}
 }
 }
