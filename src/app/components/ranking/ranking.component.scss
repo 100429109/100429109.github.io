@@ -1,0 +1,101 @@
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    --border-radius: 4px;
+    display: contents;
+}
+
+#informacion {
+    justify-content: center;
+    text-align: justify;
+    margin: 12rem auto 0 auto;
+    padding-bottom: 0;
+    width: 600px;
+    display: block;
+}
+
+#cuadro_busqueda {
+    margin-top: 0;
+    padding-top: 2rem;
+}
+
+.elementos-auxiliares {
+    font-weight: bold;
+}
+
+.form-control {
+    margin-left: 0.5rem;
+    border-radius: 4px;
+    border:none;
+    padding: 0.5rem 1rem;
+    background-color: whitesmoke;
+    font-weight: bold;
+}
+
+#ranking{
+    padding-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    border-spacing: 40px 10px;
+}
+
+.barra-filtro{
+    padding-top: 12%;
+    place-content: center center;
+    display: flex;
+}
+
+.boton_cerrar{
+    text-align: center;
+
+}
+
+.modal{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0 , 0, 0, 0.2);
+    text-align: center;
+    width:50%;
+    padding: 20px 40px;
+    max-height: 90%;
+    position: fixed; /* Stay in place */
+    overflow-y:scroll;
+}
+.modal-container{
+    display: flex;
+    background-color: rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 4;
+}
+.modal_hid{
+    display: none;
+}
+
+.comentario{
+    text-align: center;
+}
+
+.container{
+    padding-top: 12%;
+    text-align: center;
+}
+
+#ranking_establecimientos {
+    margin: auto;
+}
+
+#comentarios {
+    max-width: 200px;
+    justify-self: center;
+    text-align: justify;
+}

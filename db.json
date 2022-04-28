@@ -56,5 +56,46 @@
     }
   ],
   "comentarios": [
+    {
+      "establecimientoId": "est0",
+      "comentario": "Buenardo",
+      "id": 1
+    },
+    {
+      "establecimientoId": "est5",
+      "usuario": "Pablo",
+      "comentario": "Bien!",
+      "id": 2
+    },
+    {
+      "establecimientoId": "est4",
+      "usuario": "Pablo",
+      "comentario": "Bien!Vamos!",
+      "id": 3
+    },
+    {
+      "establecimientoId": "est4",
+      "usuario": "Mercedes",
+      "comentario": "Muy buenas tardes",
+      "id": 4
+    },
+    {
+      "establecimientoId": "est2",
+      "usuario": "Pablo",
+      "comentario": "Esto es un comentario super largo de prueba para Sara que me lo ha pedido",
+      "id": 5
+    },
+    {
+      "establecimientoId": "est5",
+      "usuario": "Pablo",
+      "comentario": "",
+      "id": 6
+    },
+    {
+      "establecimientoId": "est5",
+      "usuario": "Pablo",
+      "comentario": "olaaa",
+      "id": 7
+    }
   ]
 }

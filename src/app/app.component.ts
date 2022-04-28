@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { RankingComponent } from './components/ranking/ranking.component';
+import { MapaComponent } from './components/mapa/mapa.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import { usuario } from './model/model.interface';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,50 +13,39 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'filterPipe';
 
-  lat: number;
-  lng: number;
-  zoom: number;
+  @ViewChild(RankingComponent) childRanking:any;
+  @ViewChild(MapaComponent) childMapa:any;
 
-  lat1: number;
-  lng1: number;
 
-  lat2: number;
-  lng2: number;
+  public usuarioCambio:any = -1;
+  constructor () { }
 
-  lat3: number;
-  lng3: number;
+  receiveMessage($event:any) {
+    console.log($event, "recibimos cosas")
+    if ($event != -1 && $event != 'ocultar') {
+      this.enviar($event);
+    } else {
+      if( $event == 'ocultar') {
+        this.ocultar();
+      } else {
+        if ($event == 'mostrar') {
+          this.mostrar()
+        }
+      }
+    }
+  }
 
-  lat4: number;
-  lng4: number;
+  mostrar() {
+    console.log('daleeee')
+    this.usuarioCambio = 'mostrar';
+  }
 
-  lat5: number;
-  lng5: number;
+  ocultar() {
+    this.usuarioCambio = 'ocultar';
+  }
 
-  lat6: number;
-  lng6: number;
-
-  constructor () {
-    this.lat = 40.59;
-    this.lng = -3.63;
-    this.zoom = 8.5;
-    /** Mercadona Collado Villalba */
-    this.lat1 = 40.65269571422229;
-    this.lng1 = -4.007315900455032;
-    /** La Perla */
-    this.lat2 = 40.6288173720967;
-    this.lng2 = -4.013888596764439;
-    /** El Olivo */
-    this.lat3 = 40.56638441433393;
-    this.lng3 = -4.012773401149934;
-    /** Nuit */
-    this.lat4 = 40.44898860449167;
-    this.lng4 = -3.694924071626357;
-    /** Cervecería Restaurante Parada y Fonda */
-    this.lat5 = 40.58544073696735;
-    this.lng5 = -4.131269735404272;
-    /** Carniceria Mariano */
-    this.lat6 = 40.500469385594776;
-    this.lng6 = -4.236862966087737;
+  enviar(datos:any) {
+    this.usuarioCambio = datos;
   }
 
 }

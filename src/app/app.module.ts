@@ -8,12 +8,16 @@ import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './pipes/filter.pipe';
 import { HttpClientModule } from "@angular/common/http";
 import { AgmCoreModule } from '@agm/core';
+import { MapaComponent } from './components/mapa/mapa.component';
+import { RankingComponent } from './components/ranking/ranking.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsuariosComponent,
-    FilterPipe
+    FilterPipe,
+    MapaComponent,
+    RankingComponent
   ],
   imports: [
     BrowserModule,
