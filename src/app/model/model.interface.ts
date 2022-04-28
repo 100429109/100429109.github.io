@@ -1,3 +1,4 @@
+
 export interface usuario {
     id: any,
     name: string,
@@ -12,7 +13,7 @@ export interface establecimiento{
     calle: string,
     localidad: string,
     descripcion: string,
-    valoracion : any 
+    valoracion : any,
 }
 
 export interface comentario {
@@ -21,3 +22,4 @@ export interface comentario {
     usuario: string,
     comentario:string
 }
+

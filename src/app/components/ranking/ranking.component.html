@@ -47,111 +47,33 @@
         </div>
     </div>    
 </div>
-<div id="modal_cont0"class="modal-container modal_hid" >
-    <div id="modal0" class="modal">
+<div class="modal-container modal_hid"  id="popup_est_especifico">
+    <div class="modal">
         <div>
             <button id=boton_cerrar_form1 type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
         </div>
-            <h1> Bar El Olivo</h1>
-            <br>
-            <img src="assets/images/olivo.jpg" class = "est_popup" alt="Olivo" width=30%>
-            <br><h4>Valoracion: 4</h4>
-                <h4>Tipo:</h4> Hosteleria<br>
-                <h4>Calle:</h4> Carr. de Galapagar, 49, 28270 Colmenarejo, Madrid<br>
-                <h4>Localidad:</h4> Colmenarejo<br><br>
-                <h4>Descrición:</h4>Este bar cuenta con una rampa para el acceso por la puerta principal. Todas las puertas permiten el paso de una 
-                silla de ruedas. Además los baños están habilitados y no se requiere cambiar de planta para acceder a ellos.
-            <h3>SECCIÓN DE COMENTARIOS</h3><br><br><br><br><br>
-        </div>
-</div>
-<div id="modal_cont1"class="modal-container modal_hid" >
-    <div id="modal1" class="modal">
-        <div>
-            <button id=boton_cerrar_form1 type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
-        </div>
-        <h1> Discoteca La Nuit</h1>
+        <h1 id="Titulo_est_popup"></h1>
         <br>
-        <img src="assets/images/nuit.jpg" class = "est_popup" alt="nuit" width=30%>
-        <br><h4>Valoracion: 3.5</h4>
-        <h4>Tipo:</h4> Pub/Discoteca<br>
-        <h4>Calle:</h4>C. de Orense, 10, 28020 Madrid<br>
-        <h4>Localidad:</h4> Madrid<br><br>
-        <h4>Descrición:</h4>Discoteca con buen acceso y un baño habilitado para personas con movilidad reducida.
-        
-        <h3>SECCIÓN DE COMENTARIOS</h3><br><br><br><br><br>
+        <img class = "est_popup" width=30% id="img_est_popup">
+        <br><h4>Valoracion: </h4><p id="valoracion_est_popup"><br>
+        </p>
+        <h4>Tipo: </h4><p id="tipo_est_popup"><br>
+        </p>
+        <h4>Calle:</h4> <p id="calle_est_popup"><br>
+        </p>
+        <h4>Localidad:</h4><p id="localidad_est_popup"><br>
+        </p>
+        <h4>Descripción:</h4><p id="descripcion_est_popup"><br>
+        </p>
     </div>
 </div>
 
-<div id="modal_cont2"class="modal-container modal_hid" >
-    <div id="modal2" class="modal">
-        <div>
-            <button id=boton_cerrar_form1 type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
-        </div>
-        <h1> Mercadona </h1>
-        <br>
-        <img src="assets/images/mercadona.jpg" class = "est_popup" alt="mercadona" width=30%>
-        <br><h4>Valoracion: 4.5</h4>
-        <h4>Tipo:</h4> Comercio<br>
-        <h4>Calle:</h4>Av. Juan Carlos I, s/n, 28400 Collado Villalba, Madrid<br>
-        <h4>Localidad:</h4> Collado Villalba<br><br>
-        <h4>Descrición:</h4>Supermercado con ascensores y pasillos amplios. Correctamente habilitado para personas con movilidad reducida.
-        
-        <h3>SECCIÓN DE COMENTARIOS</h3><br><br><br><br><br>
-    </div>
+<div class="comentario">
+    <br>
+    <br>
+    <input type="text" class="form-control" name = "comentario" placeholder="(Comentario)" [(ngModel)]="inputComentario">
 </div>
-<div id="modal_cont3"class="modal-container modal_hid" >
-    <div id="modal3" class="modal">
-        <div>
-            <button id=boton_cerrar_form1 type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
-        </div>
-        <h1> Cervecería Restaurante Parada y Fonda </h1>
-        <br>
-        <img src="assets/images/ParadayFonda.jpg" class = "est_popup" alt="pyf" width=30%>
-        <br><h4>Valoracion: 2</h4>
-        <h4>Tipo:</h4> Hosteleria<br>
-        <h4>Calle:</h4>C. de Gómez del Campo, 13, 28280 El Escorial, Madrid<br>
-        <h4>Localidad:</h4>El Escorial<br><br>
-        <h4>Descrición:</h4>Buen acceso, su interior medianamente espacioso. No posee baño habilitado para personas con movilidad reducida
-        
-        <h3>SECCIÓN DE COMENTARIOS</h3><br><br><br><br><br>
-    </div>
-</div>
-<div id="modal_cont4"class="modal-container modal_hid" >
-    <div id="modal4" class="modal">
-        <div>
-            <button id=boton_cerrar_form1 type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
-        </div>
-        <h1> Carnicería Mariano </h1>
-        <br>
-        <img src="assets/images/R.jpg" class = "est_popup" alt="cm" width=30%>
-        <br><h4>Valoracion: 5</h4>
-        <h4>Tipo:</h4>Comercio<br>
-        <h4>Calle:</h4>C. Traspalacio, 22, 28294 Robledo de Chavela, Madrid<br>
-        <h4>Localidad:</h4>Robledo de Chavela<br><br>
-        <h4>Descrición:</h4>Carnicería con rampa en el acceso y puertas automáticas.
-        
-        <h3>SECCIÓN DE COMENTARIOS</h3><br><br><br><br><br>
-    </div>
-</div>
-
-<div id="modal_cont5"class="modal-container modal_hid" >
-    <div id="modal5" class="modal">
-        <div>
-            <button id=boton_cerrar_form1 type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
-        </div>
-        <h1> La Perla</h1>
-        <br>
-        <img src="assets/images/laperla.jpg" class = "est_popup" alt="La Perla" width=30%>
-        <br><h4>Valoracion: 9</h4>
-        <h4>Tipo:</h4>Restaurante<br>
-        <h4>Calle:</h4>El Gorronal<br>
-        <h4>Localidad:</h4>Collado Villalba<br><br>
-        <h4>Descrición:</h4>podifgeoirfnerf poefnaòif as`foiasdcsd `soidv sd`voisnd jdirrhv fdfiubdr fbeurifebf erifuebriferbgdskvd
-            aeorigeorifpeoirfhpwoeirfeorif feprf
-        
-        <h3>SECCIÓN DE COMENTARIOS</h3>><br><br><br><br><br>
-    </div>
-</div>
+<br>
 <div class="comentario">
     <br>
     <br>

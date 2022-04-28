@@ -1,15 +1,14 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { DataService } from './../../services/data.service';
-import { establecimiento } from '../../model/model.interface';
-import { comentario } from '../../model/model.interface';
 import { Observable, of } from "rxjs";
-
+import { usuario } from '../../model/model.interface';
+import { RankingComponent } from '../ranking/ranking.component';
 
 @Component({
   selector: 'app-usuarios',
   templateUrl: './usuarios.component.html',
   styleUrls: ['./usuarios.component.scss'],
-  providers: [DataService]
+  providers: [DataService, RankingComponent]
 })
 export class UsuariosComponent implements OnInit {
 
@@ -17,10 +16,31 @@ export class UsuariosComponent implements OnInit {
 
   public usuario_actual:any = -1;
   public datos: any;
+  public nuevo_usuario: usuario = {id:0, name: '',password: '', email:''};
+  public usuarios: usuario[]=[];
   
-  constructor(private datasrv: DataService) { }
+  constructor(private datasrv: DataService, private rank: RankingComponent) { }
 
   ngOnInit() {
+    this.refrescarUsuarios();
+  }
+
+  refrescarUsuarios() {
+    this.datasrv.getUsuarios().subscribe(data => {
+      this.usuarios = data;
+      console.log(this.usuarios);
+    });
+  }
+
+  getUsuarios$():Observable<usuario[]> {
+    return of(this.usuarios);
+  }
+
+  clickCrearUsuario() {
+    this.datasrv.crearUsuario(this.usuario_actual.id, this.usuario_actual.name, this.usuario_actual.password, this.usuario_actual.email).subscribe(data => {
+      this.nuevo_usuario = data;
+      this.refrescarUsuarios();
+    });
   }
 
   cerrar_form(target: any){
@@ -91,13 +111,14 @@ export class UsuariosComponent implements OnInit {
     target.preventDefault();
     var usuario = (<HTMLInputElement>document.getElementById('login_nombre')).value;
     var contraseña = (<HTMLInputElement>document.getElementById('login_contrasena')).value;
-    var usuarios = this.datasrv.getPedidos();
+    //var usuarios = this.datasrv.getPedidos();
+    
     if (usuario != '' && contraseña != ''){
       
-      for (var i=0; i<usuarios.length; ++i) {
-        var user = usuarios[i];
+      for (var i=0; i<this.usuarios.length; ++i) {
+        var user = this.usuarios[i];
         if (user.name == usuario && user.password == contraseña){
-          this.usuario_actual = usuarios[i];
+          this.usuario_actual = this.usuarios[i];
 
           this.sendMessage(this.usuario_actual);
   
@@ -123,12 +144,12 @@ export class UsuariosComponent implements OnInit {
     var contraseña = (<HTMLInputElement>document.getElementById('n_contraseña')).value;
     var correo = (<HTMLInputElement>document.getElementById('n_mail')).value;
     var nombre = (<HTMLInputElement>document.getElementById('n_nombre')).value;
-    var usuarios = this.datasrv.getPedidos();
+    //var usuarios = this.datasrv.getPedidos();
 
   if (usuario != '' && contraseña != '' && correo != '' && nombre != ''){
       var repetido = false;
-      for (var i=0; i<usuarios.length; ++i) {
-        var user = usuarios[i];
+      for (var i=0; i<this.usuarios.length; ++i) {
+        var user = this.usuarios[i];
         if (user.name == usuario){ 
           repetido = true;
           break
@@ -137,12 +158,11 @@ export class UsuariosComponent implements OnInit {
 
       if (repetido != true){
         
-        var datos = {id: usuarios.length, name: usuario, password: contraseña, email: correo};
-        this.datasrv.setUsuarios(datos);
+        var datos = {id: this.usuarios.length, name: usuario, password: contraseña, email: correo};
+        //this.datasrv.setUsuarios(datos);
         this.usuario_actual = datos;
-
+        this.clickCrearUsuario();
         this.sendMessage(this.usuario_actual);
-
         document.getElementById('organizador2')!.style.display = 'none';
         document.getElementById("lista2")!.style.display="none";
         document.getElementById("miPerfil")!.style.display="block";

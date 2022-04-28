@@ -97,5 +97,25 @@
       "comentario": "olaaa",
       "id": 7
     }
+  ],
+  "usuarios": [
+    {
+      "id": 0,
+      "name": "Pablo",
+      "password": "holasoypablo",
+      "email": "holasoypablo#gmail.com"
+    },
+    {
+      "id": 1,
+      "name": "sas",
+      "password": "sa",
+      "email": "100429109@alumnos.uc3m.es"
+    },
+    {
+      "id": 2,
+      "name": "a",
+      "password": "a",
+      "email": "saralj1210@gmail.com"
+    }
   ]
 }

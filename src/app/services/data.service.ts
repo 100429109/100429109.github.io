@@ -7,7 +7,7 @@ import { Observable } from "rxjs";
 
 @Injectable()
 export class DataService {
-  private usuarios : usuario[] = [
+  /*private usuarios : usuario[] = [
     {
       id: 0,
       name:'Pablo',
@@ -44,7 +44,7 @@ export class DataService {
       password: 'Konoplev:)',
       email:'kalasnokov@gmail.com'
     }
-  ];
+  ]; 
   
   getPedidos(): usuario[]{
     return this.usuarios;
@@ -54,10 +54,11 @@ export class DataService {
     console.log(this.usuarios)
     this.usuarios.push(datos);
     console.log(this.usuarios)
-  }
+  }*/
 
   private urlEstablecimientos = "http://localhost:3000/establecimientos";
   private urlComentarios = "http://localhost:3000/comentarios";
+  private urlUsuarios = "http://localhost:3000/usuarios";
 
   constructor(private http: HttpClient) {}
 
@@ -69,12 +70,32 @@ export class DataService {
     return this.http.get<comentario[]>(this.urlComentarios);
   }
 
+  public getUsuarios(): Observable<usuario[]>{
+    return this.http.get<usuario[]>(this.urlUsuarios);
+  }
+  
+  
+
   public crearComentario(establecimientoId: any, usuario: string, comentario: string): Observable<comentario>{
     const headers = {'content-type': 'application/json'};  
     const body = {"establecimientoId": establecimientoId, "usuario": usuario, "comentario": comentario};
     console.log(body);
+    console.log("HOLAAA", this.http.post<comentario>(this.urlComentarios, body, {'headers':headers}))
+    console.log("us", this.http.get<usuario[]>(this.urlUsuarios))
     return this.http.post<comentario>(this.urlComentarios, body, {'headers':headers});  
+    
   } 
+  public crearUsuario(id: any, name: string, password: string, email: string): Observable<usuario>{
+    const headers = {'content-type': 'application/json'};  
+    const body = {"id": id, "name": name, "password": password, "email": email};
+    console.log(body);
+    console.log("HOLAAA", this.http.post<comentario>(this.urlComentarios, body, {'headers':headers}))
+    console.log("us", this.http.get<usuario[]>(this.urlUsuarios))
+    return this.http.post<usuario>(this.urlUsuarios, body, {'headers':headers});  
+    
+  } 
+
+
 }
 
 /*

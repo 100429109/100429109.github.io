@@ -21,8 +21,10 @@ export class RankingComponent implements OnInit {
     calle: '', localidad: '',
     descripcion: '', valoracion : 0};
   public locales: establecimiento[] = [];
+  //public usuarios: usuario[]=[];
   public comments: comentario[] = [];
   public comemtar: comentario = {id: 0, establecimientoId: 0, usuario: '', comentario: ''};
+  //public nuevo_usuario: usuario = {id:0, name: '',password: '', email:''};
   inputComentario = '';
   filterLista = '';
   constructor(private datasrv: DataService) { }
