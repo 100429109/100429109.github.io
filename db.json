@@ -7,7 +7,8 @@
       "calle": "Carr. de Galapagar, 49, 28270 Colmenarejo, Madrid",
       "localidad": "Colmenarejo",
       "descripcion": "Este bar cuenta con una rampa para el acceso por la puerta principal. Todas las puertas permiten el paso de una silla de ruedas. Además los baños están habilitados y no se requiere cambiar de planta para acceder a ellos.",
-      "valoracion": 4
+      "valoracion": 4,
+      "imagen": "assets/images/olivo.jpg"
     },
     {
       "id": "est1",
@@ -16,7 +17,8 @@
       "calle": "C. de Orense, 10, 28020 Madrid",
       "localidad": "Madrid",
       "descripcion": "Discoteca con buen acceso y un baño habilitado para personas con movilidad reducida.",
-      "valoracion": 3.5
+      "valoracion": 3.5,
+      "imagen": "assets/images/nuit.jpg"
     },
     {
       "id": "est2",
@@ -25,7 +27,8 @@
       "calle": "Av. Juan Carlos I, s/n, 28400 Collado Villalba, Madrid",
       "localidad": "Collado Villalba",
       "descripcion": "Supermercado con ascensores y pasillos amplios. Correctamente habilitado para personas con movilidad reducida.",
-      "valoracion": 4.5
+      "valoracion": 4.5,
+      "imagen": "assets/images/mercadona.jpg"
     },
     {
       "id": "est3",
@@ -34,7 +37,8 @@
       "calle": "C. de Gómez del Campo, 13, 28280 El Escorial, Madrid",
       "localidad": "El Escorial",
       "descripcion": "Buen acceso, su interior medianamente espacioso. No posee baño habilitado para personas con movilidad reducida",
-      "valoracion": 2
+      "valoracion": 2,
+      "imagen": "assets/images/ParadayFonda.jpg"
     },
     {
       "id": "est4",
@@ -43,7 +47,8 @@
       "calle": "C. Traspalacio, 22, 28294 Robledo de Chavela, Madrid",
       "localidad": "Robledo de Chavela",
       "descripcion": "Carnicería con rampa en el acceso y puertas automáticas.",
-      "valoracion": 5
+      "valoracion": 5,
+      "imagen": "assets/images/R.jpg"
     },
     {
       "id": "est5",
@@ -52,7 +57,8 @@
       "calle": "El Gorronal",
       "localidad": "Collado Villlba",
       "descripcion": "Comida casera",
-      "valoracion": 9
+      "valoracion": 9,
+      "imagen": "assets/images/laperla.jpg"
     }
   ],
   "comentarios": [

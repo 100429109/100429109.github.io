@@ -14,6 +14,7 @@ export interface establecimiento{
     localidad: string,
     descripcion: string,
     valoracion : any,
+    imagen: any
 }
 
 export interface comentario {

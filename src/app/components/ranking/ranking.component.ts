@@ -19,7 +19,7 @@ export class RankingComponent implements OnInit {
   public selectedEstablecimiento: establecimiento ={
     id: 6, name: '', tipo: '',
     calle: '', localidad: '',
-    descripcion: '', valoracion : 0};
+    descripcion: '', valoracion : 0, imagen :''};
   public locales: establecimiento[] = [];
   //public usuarios: usuario[]=[];
   public comments: comentario[] = [];
@@ -95,25 +95,37 @@ export class RankingComponent implements OnInit {
     target.parentNode.parentNode.parentNode!.style.display = 'none';
   }
 
-abrir_popup(id:string) {
-  if (id=="est0"){
-    document.getElementById("modal_cont0")!.style.display="flex"
+  abrir_popup(id: any) {
+    document.getElementById('popup_est_especifico')!.style.display = "flex";
+    var index = -1;
+    for (var i=0; i<this.locales.length; ++i){
+      if(this.locales[i].id == id){
+        index = i;
+      }
+    }
+    var img_popup =document.getElementById('img_est_popup') as HTMLImageElement;
+    var imagen = this.locales[index].imagen;
+    img_popup.src = imagen;
+  
+    var titulo_popup =document.getElementById('Titulo_est_popup');
+    titulo_popup!.innerText = this.locales[index].name;
+  
+    var valoracion_popup = document.getElementById('valoracion_est_popup');
+    valoracion_popup!.innerText = this.locales[index].valoracion;
+  
+    var tipo_popup = document.getElementById('tipo_est_popup');
+    tipo_popup!.innerText = this.locales[index].tipo;
+  
+    var calle_popup = document.getElementById('calle_est_popup');
+    calle_popup!.innerText = this.locales[index].calle;
+  
+    var localidad_popup = document.getElementById('localidad_est_popup');
+    localidad_popup!.innerText = this.locales[index].localidad;
+  
+    var descripcion_popup = document.getElementById('descripcion_est_popup');
+    descripcion_popup!.innerText = this.locales[index].descripcion;
+  
+  
   }
-  if (id=="est1"){
-    document.getElementById("modal_cont1")!.style.display="flex"
-  }
-  if (id=="est2"){
-    document.getElementById("modal_cont2")!.style.display="flex"
-  }
-  if (id=="est3"){
-    document.getElementById("modal_cont3")!.style.display="flex"
-  }
-  if (id=="est4"){
-    document.getElementById("modal_cont4")!.style.display="flex"
-  }
-  if (id=="est5"){
-    document.getElementById("modal_cont5")!.style.display="flex"
-  }
-}
 
 }
