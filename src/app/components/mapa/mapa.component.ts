@@ -9,17 +9,21 @@ export class MapaComponent implements OnInit {
   title = 'filterPipe';
 
   @Input() usuario_iniciado:any;
+  public usuario_actual:any = -1;
 
   ngOnChanges(changes:any) {
-    console.log(changes, 'pooooooo')
-    if (changes.nombre != "undefined" && changes.usuario_iniciado.currentValue != -1 && changes.usuario_iniciado.currentValue != 'ocultar' && changes.usuario_iniciado.currentValue != 'mostrar'){
+    if (changes.usuario_iniciado.currentValue != -1 && changes.usuario_iniciado.currentValue != 'ocultar' && changes.usuario_iniciado.currentValue != 'mostrar'){
+      this.usuario_actual = JSON.parse(changes.usuario_iniciado.currentValue);
+      this.mostrar();
     } else {
       if(changes.usuario_iniciado.currentValue == 'ocultar') {
         this.ocultar();
       } else {
         if(changes.usuario_iniciado.currentValue == 'mostrar') {
+          console.log('cerrando')
+          this.usuario_actual = -1;
           this.mostrar();
-        }
+        } 
       }
     }
   }

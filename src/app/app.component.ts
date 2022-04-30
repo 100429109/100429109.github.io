@@ -3,6 +3,7 @@ import { MapaComponent } from './components/mapa/mapa.component';
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { usuario } from './model/model.interface';
 import { Component, ViewChild } from '@angular/core';
+import { stringify } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +23,7 @@ export class AppComponent {
 
   receiveMessage($event:any) {
     console.log($event, "recibimos cosas")
-    if ($event != -1 && $event != 'ocultar') {
+    if ($event != -1 && $event != 'ocultar' && $event != 'mostrar') {
       this.enviar($event);
     } else {
       if( $event == 'ocultar') {
@@ -36,7 +37,6 @@ export class AppComponent {
   }
 
   mostrar() {
-    console.log('daleeee')
     this.usuarioCambio = 'mostrar';
   }
 
@@ -45,7 +45,9 @@ export class AppComponent {
   }
 
   enviar(datos:any) {
-    this.usuarioCambio = datos;
+    var datos_str = JSON.stringify(datos);
+    console.log(datos_str, 'usuario desde app', typeof(datos_str))
+    this.usuarioCambio = datos_str;
   }
 
 }

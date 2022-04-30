@@ -1,3 +1,4 @@
+import { usuario } from './../../model/model.interface';
 import { Component, OnInit, Input } from '@angular/core';
 import { DataService } from './../../services/data.service';
 import { establecimiento } from '../../model/model.interface';
@@ -34,16 +35,18 @@ export class RankingComponent implements OnInit {
   }
 
   ngOnChanges(changes:any) {
-    console.log(changes, 'pooooooo')
-    if (changes.nombre != "undefined" && changes.usuario_iniciado.currentValue != -1 && changes.usuario_iniciado.currentValue != 'ocultar' && changes.usuario_iniciado.currentValue != 'mostrar'){
-      this.usuario_actual = changes.usuario_iniciado.currentValue;
+    if (changes.usuario_iniciado.currentValue != -1 && changes.usuario_iniciado.currentValue != 'ocultar' && changes.usuario_iniciado.currentValue != 'mostrar'){
+      this.usuario_actual = JSON.parse(changes.usuario_iniciado.currentValue);
+      this.mostrar();
     } else {
       if(changes.usuario_iniciado.currentValue == 'ocultar') {
         this.ocultar();
       } else {
         if(changes.usuario_iniciado.currentValue == 'mostrar') {
+          console.log('cerrando')
+          this.usuario_actual = -1;
           this.mostrar();
-        }
+        } 
       }
     }
   }
@@ -79,14 +82,18 @@ export class RankingComponent implements OnInit {
   }
 
   clickCrearComentario(establecimientoId: any) {
+    console.log(this.usuario_actual, 'publicando comentario')
     if (this.usuario_actual != -1){
     this.datasrv.crearComentario(establecimientoId, this.usuario_actual.name, this.inputComentario).subscribe(data => {
       this.comemtar = data;
-      console.log(this.comemtar);
+      var input_coment = document.getElementById("comentario") as HTMLInputElement;
+      input_coment.value = '';
       this.refrescar();
     });
   }
   else{
+    var input_coment = document.getElementById("comentario") as HTMLInputElement;
+    input_coment.value = '';
     alert("No estás logado. Debes registrarte para comentar")
   }
   }

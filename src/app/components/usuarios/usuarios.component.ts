@@ -98,13 +98,14 @@ export class UsuariosComponent implements OnInit {
 
   cerrar_sesion(){
     this.usuario_actual = -1;
-    this.sendMessage(this.usuario_actual);
+    
+    this.sendMessage('mostrar');
     document.getElementById('organizador3')!.style.display = 'none';
     document.getElementById("miPerfil")!.style.display="none";
     document.getElementById("lista2")!.style.display="flex";
 
     document.getElementById('cabecera')!.style.display = 'inline-block';
-    this.sendMessage('mostrar');
+    //this.sendMessage('mostrar');
   }
 
   iniciar_sesion(target:any){
@@ -127,7 +128,7 @@ export class UsuariosComponent implements OnInit {
           document.getElementById("miPerfil")!.style.display="block";
 
           document.getElementById('cabecera')!.style.display = 'inline-block';
-          this.sendMessage('mostrar');
+          //this.sendMessage('mostrar');
       
           break
         }
@@ -168,7 +169,7 @@ export class UsuariosComponent implements OnInit {
         document.getElementById("miPerfil")!.style.display="block";
 
         document.getElementById('cabecera')!.style.display = 'inline-block';
-        this.sendMessage('mostrar');
+        //this.sendMessage('mostrar');
 
         var resetForm = <HTMLFormElement>document.getElementById('sign_up');
         resetForm.reset();
@@ -190,7 +191,6 @@ export class UsuariosComponent implements OnInit {
   perfil(){
     document.getElementById("organizador5")!.style.display="flex";
     document.getElementById("organizador4")!.style.display="none";
-    console.log('olaaaa')
   }
 
   comentarios(){
