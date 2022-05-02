@@ -21,7 +21,6 @@
                             <th>Nombre</th>
                             <th>Localidad</th>
                             <th>Puntuacion</th>
-                            <th>Comentarios</th>
                             <th></th>
 
                         </tr>
@@ -35,16 +34,9 @@
                                 {{establecimiento.valoracion}}
                            </td>
                             <td>
-                                <div *ngIf="getComentarios$(establecimiento.id) | async as coms">
-                                    <ul *ngFor="let com of coms; index as i">
-                                        <li id="comentarios">{{com.usuario}}: {{com.comentario}}</li>
-                                    </ul>
-                                </div>    
-                            </td>
-                            <td>
                                 <button  (click)="clickCrearComentario(establecimiento.id)">Añadir comentario</button>
                                 <button  (click)="addPuntuacion(establecimiento.id)">Añadir Puntuación</button>
-                            </td> 
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -55,7 +47,7 @@
 <div class="modal-container modal_hid"  id="popup_est_especifico">
     <div class="modal">
         <div>
-            <button id=boton_cerrar_form1 type="reset" class="boton_cerrar_form" (click)="cerrar_form($event.target)">Cerrar</button>
+            <button id=boton_cerrar_form1 type="reset" class="boton_cerrar_form" (click)="cerrar_form()">Cerrar</button>
         </div>
         <h1 id="Titulo_est_popup"></h1>
         <br>
@@ -80,6 +72,8 @@
             <p class="negrita">Descripción: </p><p id="descripcion_est_popup">
             </p>
         </div>
+        <h2>COMENTARIOS: </h2><ul class = 'lista_coments' id='comentarios_est_popup'>
+        </ul>
     </div>
 </div>
 <div class="comentario">

@@ -23,12 +23,10 @@ export class RankingComponent implements OnInit {
     calle: '', localidad: '',
     descripcion: '', valoraciones : [], valoracion:0, imagen :''};
     public locales: establecimiento[] = [];
-  //public usuarios: usuario[]=[];
   public comments: comentario[] = [];
   public comemtar: comentario = {id: 0, establecimientoId: 0, usuario: '', comentario: ''};
-  //public nuevo_usuario: usuario = {id:0, name: '',password: '', email:''};
   inputComentario = '';
-  inputPuntuacion= 0;
+  inputPuntuacion='';
   filterLista = '';
   constructor(private datasrv: DataService) { }
 
@@ -128,16 +126,26 @@ export class RankingComponent implements OnInit {
     this.locales[index].valoracion = (total/contador);
   }
 
-  cerrar_form(target: any){
-    target.parentNode.parentNode.parentNode!.style.display = 'none';
+  cerrar_form(){
+    document.getElementById("popup_est_especifico")!.style.display = 'none';
+    var ul_general = document.getElementById("comentarios_est_popup");
+    while(ul_general!.childNodes.length > 0){
+      ul_general!.removeChild(ul_general!.childNodes[0]);
+    }
   }
 
   abrir_popup(id: any) {
     document.getElementById('popup_est_especifico')!.style.display = "flex";
     var index = -1;
+    var lista_coments = [];
     for (var i=0; i<this.locales.length; ++i){
       if(this.locales[i].id == id){
         index = i;
+      }
+    }
+    for (var i= 0; i< this.comments.length; ++i){
+      if(id == this.comments[i].establecimientoId){
+        lista_coments.push(this.comments[i])
       }
     }
     var img_popup =document.getElementById('img_est_popup') as HTMLImageElement;
@@ -162,7 +170,15 @@ export class RankingComponent implements OnInit {
     var descripcion_popup = document.getElementById('descripcion_est_popup');
     descripcion_popup!.innerText = this.locales[index].descripcion;
   
-  
+    for (var i= 0; i< lista_coments.length; ++i){
+      var li = document.createElement('li');
+      li.setAttribute('id', 'li_comentarios_'+ i.toString());
+      li.setAttribute('class', 'listilla_comentarios'); 
+      li.innerText = lista_coments[i].usuario + ': ' + lista_coments[i].comentario;
+      var ul = document.getElementById("comentarios_est_popup");
+      ul!.appendChild(li);
+    }
+    
   }
 
 }
