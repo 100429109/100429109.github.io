@@ -11,6 +11,7 @@ import { AgmCoreModule } from '@agm/core';
 import { MapaComponent } from './components/mapa/mapa.component';
 import { RankingComponent } from './components/ranking/ranking.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -108,10 +108,11 @@ export class RankingComponent implements OnInit {
       for (var i=0; i<this.locales.length; ++i){
         if (this.locales[i].id == establecimientoId){
           index = i;
-          console.log("prueba: ", this.locales[i].valoraciones);
           this.locales[i].valoraciones.push(Number(this.inputPuntuacion));
           }};
       this.calcularMedia(index);
+      this.datasrv.setEstablecimiento(this.locales[index]).subscribe();
+      console.log("LOCALES: ", this.locales);
       
 
     }
@@ -121,9 +122,6 @@ export class RankingComponent implements OnInit {
       alert("No estás logado. Debes registrarte para comentar")
     }
     }
-  sumar(valor1:number, valor2:number): number {
-    return valor1+valor2;
-  }
   calcularMedia(index: any): void{
     var contador = 0;
     var total = 0

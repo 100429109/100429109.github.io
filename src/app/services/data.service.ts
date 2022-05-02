@@ -27,6 +27,9 @@ export class DataService {
     return this.http.get<usuario[]>(this.urlUsuarios);
   }
   
+  public setEstablecimiento(local: establecimiento): Observable<void>{
+    return this.http.put<void>(`${this.urlEstablecimientos}/${local.id}`, local);
+  }
 
   public crearComentario(establecimientoId: any, usuario: string, comentario: string): Observable<comentario>{
     const headers = {'content-type': 'application/json'};  
