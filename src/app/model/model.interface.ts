@@ -13,7 +13,8 @@ export interface establecimiento{
     calle: string,
     localidad: string,
     descripcion: string,
-    valoracion : any,
+    valoraciones : any,
+    valoracion: number,
     imagen: any
 }
 
@@ -22,5 +23,10 @@ export interface comentario {
     establecimientoId: any,
     usuario: string,
     comentario:string
+}
+
+export interface puntuacion {
+    establecimientoId: any,
+    valor: number
 }
 

@@ -31,7 +31,9 @@
                         <tr id = "{{'trr' + i}}" *ngFor="let establecimiento of establecimientos | filter:filterLista; index as i">
                             <td (click)="abrir_popup(establecimiento.id)">{{establecimiento.name}}</td>
                             <td>{{establecimiento.localidad}}</td>
-                            <td>{{establecimiento.valoracion}}</td>
+                            <td>                                
+                                {{establecimiento.valoracion}}
+                           </td>
                             <td>
                                 <div *ngIf="getComentarios$(establecimiento.id) | async as coms">
                                     <ul *ngFor="let com of coms; index as i">
@@ -39,7 +41,10 @@
                                     </ul>
                                 </div>    
                             </td>
-                            <td><button  (click)="clickCrearComentario(establecimiento.id)">Añadir comentario</button></td> 
+                            <td>
+                                <button  (click)="clickCrearComentario(establecimiento.id)">Añadir comentario</button>
+                                <button  (click)="addPuntuacion(establecimiento.id)">Añadir Puntuación</button>
+                            </td> 
                         </tr>
                     </tbody>
                 </table>
@@ -77,6 +82,13 @@
         </div>
     </div>
 </div>
+<div class="comentario">
+    <br>
+    <br>
+    <label class="elementos-auxiliares" for="comentario">¡Deja tu puntuación!</label>
+    <input type="text" class="form-control" name = "puntuacion" id = "puntuacion" placeholder="(Puntuacion)" [(ngModel)]="inputPuntuacion">
+</div>
+<br>
 <div class="comentario">
     <br>
     <br>

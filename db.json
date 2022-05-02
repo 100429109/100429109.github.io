@@ -7,7 +7,8 @@
       "calle": "Carr. de Galapagar, 49, 28270 Colmenarejo, Madrid",
       "localidad": "Colmenarejo",
       "descripcion": "Este bar cuenta con una rampa para el acceso por la puerta principal. Todas las puertas permiten el paso de una silla de ruedas. Además los baños están habilitados y no se requiere cambiar de planta para acceder a ellos.",
-      "valoracion": 4,
+      "valoraciones": [],
+      "valoracion": 0,
       "imagen": "assets/images/olivo.jpg"
     },
     {
@@ -17,7 +18,8 @@
       "calle": "C. de Orense, 10, 28020 Madrid",
       "localidad": "Madrid",
       "descripcion": "Discoteca con buen acceso y un baño habilitado para personas con movilidad reducida.",
-      "valoracion": 3.5,
+      "valoraciones": [],
+      "valoracion": 0,
       "imagen": "assets/images/nuit.jpg"
     },
     {
@@ -27,7 +29,8 @@
       "calle": "Av. Juan Carlos I, s/n, 28400 Collado Villalba, Madrid",
       "localidad": "Collado Villalba",
       "descripcion": "Supermercado con ascensores y pasillos amplios. Correctamente habilitado para personas con movilidad reducida.",
-      "valoracion": 4.5,
+      "valoraciones": [],
+      "valoracion": 0,
       "imagen": "assets/images/mercadona.jpg"
     },
     {
@@ -37,7 +40,8 @@
       "calle": "C. de Gómez del Campo, 13, 28280 El Escorial, Madrid",
       "localidad": "El Escorial",
       "descripcion": "Buen acceso, su interior medianamente espacioso. No posee baño habilitado para personas con movilidad reducida",
-      "valoracion": 2,
+      "valoraciones": [],
+      "valoracion": 0,
       "imagen": "assets/images/ParadayFonda.jpg"
     },
     {
@@ -47,7 +51,8 @@
       "calle": "C. Traspalacio, 22, 28294 Robledo de Chavela, Madrid",
       "localidad": "Robledo de Chavela",
       "descripcion": "Carnicería con rampa en el acceso y puertas automáticas.",
-      "valoracion": 5,
+      "valoraciones": [],
+      "valoracion": 0,
       "imagen": "assets/images/R.jpg"
     },
     {
@@ -57,94 +62,29 @@
       "calle": "El Gorronal",
       "localidad": "Collado Villlba",
       "descripcion": "Comida casera",
-      "valoracion": 9,
+      "valoraciones": [],
+      "valoracion": 0,
       "imagen": "assets/images/laperla.jpg"
     }
   ],
   "comentarios": [
     {
-      "establecimientoId": "est0",
-      "comentario": "Buenardo",
+      "establecimientoId": "est4",
+      "usuario": "a",
+      "comentario": "",
       "id": 1
     },
     {
-      "establecimientoId": "est5",
-      "usuario": "Pablo",
-      "comentario": "Bien!",
+      "establecimientoId": "est4",
+      "usuario": "a",
+      "comentario": "ww",
       "id": 2
     },
     {
-      "establecimientoId": "est4",
-      "usuario": "Pablo",
-      "comentario": "Bien!Vamos!",
+      "establecimientoId": "est5",
+      "usuario": "a",
+      "comentario": "a",
       "id": 3
-    },
-    {
-      "establecimientoId": "est4",
-      "usuario": "Mercedes",
-      "comentario": "Muy buenas tardes",
-      "id": 4
-    },
-    {
-      "establecimientoId": "est2",
-      "usuario": "Pablo",
-      "comentario": "Esto es un comentario super largo de prueba para Sara que me lo ha pedido",
-      "id": 5
-    },
-    {
-      "establecimientoId": "est5",
-      "usuario": "Pablo",
-      "comentario": "",
-      "id": 6
-    },
-    {
-      "establecimientoId": "est5",
-      "usuario": "Pablo",
-      "comentario": "olaaa",
-      "id": 7
-    },
-    {
-      "establecimientoId": "est1",
-      "usuario": "Pablo",
-      "comentario": "ola",
-      "id": 8
-    },
-    {
-      "establecimientoId": "est1",
-      "comentario": "buenas",
-      "id": 9
-    },
-    {
-      "establecimientoId": "est0",
-      "comentario": "bien",
-      "id": 10
-    },
-    {
-      "establecimientoId": "est3",
-      "comentario": "bien",
-      "id": 11
-    },
-    {
-      "establecimientoId": "est1",
-      "comentario": "bien",
-      "id": 12
-    },
-    {
-      "establecimientoId": "est0",
-      "comentario": "bien",
-      "id": 13
-    },
-    {
-      "establecimientoId": "est3",
-      "usuario": "Pablo",
-      "comentario": "ola",
-      "id": 14
-    },
-    {
-      "establecimientoId": "est4",
-      "usuario": "Pablo",
-      "comentario": "funciona bien",
-      "id": 15
     }
   ],
   "usuarios": [

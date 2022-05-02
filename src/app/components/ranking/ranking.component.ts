@@ -3,6 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { DataService } from './../../services/data.service';
 import { establecimiento } from '../../model/model.interface';
 import { comentario } from '../../model/model.interface';
+import { puntuacion} from '../../model/model.interface';
 import { Observable, of } from "rxjs";
 
 var loged =false
@@ -20,13 +21,14 @@ export class RankingComponent implements OnInit {
   public selectedEstablecimiento: establecimiento ={
     id: 6, name: '', tipo: '',
     calle: '', localidad: '',
-    descripcion: '', valoracion : 0, imagen :''};
-  public locales: establecimiento[] = [];
+    descripcion: '', valoraciones : [], valoracion:0, imagen :''};
+    public locales: establecimiento[] = [];
   //public usuarios: usuario[]=[];
   public comments: comentario[] = [];
   public comemtar: comentario = {id: 0, establecimientoId: 0, usuario: '', comentario: ''};
   //public nuevo_usuario: usuario = {id:0, name: '',password: '', email:''};
   inputComentario = '';
+  inputPuntuacion= 0;
   filterLista = '';
   constructor(private datasrv: DataService) { }
 
@@ -71,6 +73,7 @@ export class RankingComponent implements OnInit {
       this.comments = data;
       console.log(this.comments);
     });
+    
   }
 
   getEstablecimientos$():Observable<establecimiento[]> {
@@ -85,6 +88,7 @@ export class RankingComponent implements OnInit {
     console.log(this.usuario_actual, 'publicando comentario')
     if (this.usuario_actual != -1){
     this.datasrv.crearComentario(establecimientoId, this.usuario_actual.name, this.inputComentario).subscribe(data => {
+      console.log("data: ", data);
       this.comemtar = data;
       var input_coment = document.getElementById("comentario") as HTMLInputElement;
       input_coment.value = '';
@@ -96,6 +100,38 @@ export class RankingComponent implements OnInit {
     input_coment.value = '';
     alert("No estás logado. Debes registrarte para comentar")
   }
+  }
+
+  addPuntuacion(establecimientoId: any) {
+    if (this.usuario_actual != -1){ 
+      var index = 0;
+      for (var i=0; i<this.locales.length; ++i){
+        if (this.locales[i].id == establecimientoId){
+          index = i;
+          console.log("prueba: ", this.locales[i].valoraciones);
+          this.locales[i].valoraciones.push(Number(this.inputPuntuacion));
+          }};
+      this.calcularMedia(index);
+      
+
+    }
+    else{
+      var input_puntuacion = document.getElementById("puntuacion") as HTMLInputElement;
+      input_puntuacion.value = '';
+      alert("No estás logado. Debes registrarte para comentar")
+    }
+    }
+  sumar(valor1:number, valor2:number): number {
+    return valor1+valor2;
+  }
+  calcularMedia(index: any): void{
+    var contador = 0;
+    var total = 0
+    for( var i=0; i<this.locales[index].valoraciones.length; ++i){
+      contador += 1;
+      total += Number(this.locales[index].valoraciones[i]);
+      }
+    this.locales[index].valoracion = (total/contador);
   }
 
   cerrar_form(target: any){
@@ -118,7 +154,7 @@ export class RankingComponent implements OnInit {
     titulo_popup!.innerText = this.locales[index].name;
   
     var valoracion_popup = document.getElementById('valoracion_est_popup');
-    valoracion_popup!.innerText = this.locales[index].valoracion;
+    valoracion_popup!.innerText = String(this.locales[index].valoracion);
   
     var tipo_popup = document.getElementById('tipo_est_popup');
     tipo_popup!.innerText = this.locales[index].tipo;
