@@ -28,7 +28,6 @@ export class UsuariosComponent implements OnInit {
   refrescarUsuarios() {
     this.datasrv.getUsuarios().subscribe(data => {
       this.usuarios = data;
-      console.log(this.usuarios);
     });
   }
 

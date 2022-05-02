@@ -45,7 +45,6 @@ export class RankingComponent implements OnInit {
         this.ocultar();
       } else {
         if(changes.usuario_iniciado.currentValue == 'mostrar') {
-          console.log('cerrando')
           this.usuario_actual = -1;
           this.mostrar();
         } 
@@ -67,11 +66,9 @@ export class RankingComponent implements OnInit {
     this.datasrv.getEstablecimientos().subscribe(data => {
       this.locales = data;
       this.locales.sort((a,b) => b.valoracion - a.valoracion);
-      console.log(this.locales);
     });
     this.datasrv.getComentarios().subscribe(data => {
       this.comments = data;
-      console.log(this.comments);
     });
     
   }
@@ -85,10 +82,8 @@ export class RankingComponent implements OnInit {
   }
 
   clickCrearComentario(establecimientoId: any) {
-    console.log(this.usuario_actual, 'publicando comentario')
     if (this.usuario_actual != -1){
     this.datasrv.crearComentario(establecimientoId, this.usuario_actual.name, this.inputComentario).subscribe(data => {
-      console.log("data: ", data);
       this.comemtar = data;
       var input_coment = document.getElementById("comentario") as HTMLInputElement;
       input_coment.value = '';
@@ -105,6 +100,8 @@ export class RankingComponent implements OnInit {
   addPuntuacion(establecimientoId: any) {
     if (this.usuario_actual != -1){ 
       var index = 0;
+      var input_puntuacion = document.getElementById("puntuacion") as HTMLInputElement;
+      input_puntuacion.value = '';
       for (var i=0; i<this.locales.length; ++i){
         if (this.locales[i].id == establecimientoId){
           index = i;
@@ -112,7 +109,6 @@ export class RankingComponent implements OnInit {
           }};
       this.calcularMedia(index);
       this.datasrv.setEstablecimiento(this.locales[index]).subscribe();
-      console.log("LOCALES: ", this.locales);
       
 
     }

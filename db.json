@@ -52,8 +52,8 @@
       "localidad": "Robledo de Chavela",
       "descripcion": "Carnicería con rampa en el acceso y puertas automáticas.",
       "valoraciones": [],
-      "valoracion": 5,
-      "imagen": "assets/images/R.jpg"
+      "valoracion": 0,
+      "imagen": "assets/images/carniceria.jpg"
     },
     {
       "id": "est5",
@@ -61,50 +61,12 @@
       "tipo": "Restaurante",
       "calle": "El Gorronal",
       "localidad": "Collado Villlba",
-      "descripcion": "Comida casera",
+      "descripcion": "En la entrada cuenta con 3 escalones. La puerta de acceso para el servicio es bastante estrecha",
       "valoraciones": [],
-      "valoracion": 7,
+      "valoracion": 0,
       "imagen": "assets/images/laperla.jpg"
     }
   ],
-  "comentarios": [
-    {
-      "establecimientoId": "est4",
-      "usuario": "a",
-      "comentario": "",
-      "id": 1
-    },
-    {
-      "establecimientoId": "est4",
-      "usuario": "a",
-      "comentario": "ww",
-      "id": 2
-    },
-    {
-      "establecimientoId": "est5",
-      "usuario": "a",
-      "comentario": "a",
-      "id": 3
-    }
-  ],
-  "usuarios": [
-    {
-      "id": 0,
-      "name": "Pablo",
-      "password": "holasoypablo",
-      "email": "holasoypablo#gmail.com"
-    },
-    {
-      "id": 1,
-      "name": "sas",
-      "password": "sa",
-      "email": "100429109@alumnos.uc3m.es"
-    },
-    {
-      "id": 2,
-      "name": "a",
-      "password": "a",
-      "email": "saralj1210@gmail.com"
-    }
-  ]
+  "usuarios": [],
+  "comentarios": []
 }

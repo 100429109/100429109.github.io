@@ -49,10 +49,20 @@ table{
     display: flex;
 }
 
-.boton_cerrar{
-    text-align: center;
-
-}
+.boton_cerrar_form{
+font: 500 1rem 'Quicksand', sans-serif;
+    padding: 0.8rem 1.6rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: #a6d7d8;
+    position: relative;
+    float: right;
+    }
 
 .modal{
     background-color: white;
