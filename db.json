@@ -7,8 +7,10 @@
       "calle": "Carr. de Galapagar, 49, 28270 Colmenarejo, Madrid",
       "localidad": "Colmenarejo",
       "descripcion": "Este bar cuenta con una rampa para el acceso por la puerta principal. Todas las puertas permiten el paso de una silla de ruedas. Además los baños están habilitados y no se requiere cambiar de planta para acceder a ellos.",
-      "valoraciones": [],
-      "valoracion": 0,
+      "valoraciones": [
+        6
+      ],
+      "valoracion": 6,
       "imagen": "assets/images/olivo.jpg"
     },
     {
@@ -18,8 +20,10 @@
       "calle": "C. de Orense, 10, 28020 Madrid",
       "localidad": "Madrid",
       "descripcion": "Discoteca con buen acceso y un baño habilitado para personas con movilidad reducida.",
-      "valoraciones": [],
-      "valoracion": 0,
+      "valoraciones": [
+        8
+      ],
+      "valoracion": 8,
       "imagen": "assets/images/nuit.jpg"
     },
     {
@@ -29,8 +33,10 @@
       "calle": "Av. Juan Carlos I, s/n, 28400 Collado Villalba, Madrid",
       "localidad": "Collado Villalba",
       "descripcion": "Supermercado con ascensores y pasillos amplios. Correctamente habilitado para personas con movilidad reducida.",
-      "valoraciones": [],
-      "valoracion": 0,
+      "valoraciones": [
+        8
+      ],
+      "valoracion": 8,
       "imagen": "assets/images/mercadona.jpg"
     },
     {
@@ -40,8 +46,13 @@
       "calle": "C. de Gómez del Campo, 13, 28280 El Escorial, Madrid",
       "localidad": "El Escorial",
       "descripcion": "Buen acceso, su interior medianamente espacioso. No posee baño habilitado para personas con movilidad reducida",
-      "valoraciones": [],
-      "valoracion": 0,
+      "valoraciones": [
+        5,
+        9,
+        8,
+        4
+      ],
+      "valoracion": 6.5,
       "imagen": "assets/images/ParadayFonda.jpg"
     },
     {
@@ -51,8 +62,11 @@
       "calle": "C. Traspalacio, 22, 28294 Robledo de Chavela, Madrid",
       "localidad": "Robledo de Chavela",
       "descripcion": "Carnicería con rampa en el acceso y puertas automáticas.",
-      "valoraciones": [],
-      "valoracion": 0,
+      "valoraciones": [
+        2,
+        4
+      ],
+      "valoracion": 3,
       "imagen": "assets/images/carniceria.jpg"
     },
     {
@@ -62,11 +76,54 @@
       "calle": "El Gorronal",
       "localidad": "Collado Villlba",
       "descripcion": "En la entrada cuenta con 3 escalones. La puerta de acceso para el servicio es bastante estrecha",
-      "valoraciones": [],
-      "valoracion": 0,
+      "valoraciones": [
+        null,
+        4,
+        6,
+        8
+      ],
+      "valoracion": 4.5,
       "imagen": "assets/images/laperla.jpg"
     }
   ],
-  "usuarios": [],
-  "comentarios": []
+  "usuarios": [
+    {
+      "id": 1,
+      "name": "sara",
+      "password": "sara",
+      "email": "saralj1210@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "paulita",
+      "password": "olachicos",
+      "email": "paulisss@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "pablo12",
+      "password": "nosoypablo",
+      "email": "pablito123@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "merche",
+      "password": "yonosoyMerche123",
+      "email": "merche123@gmail.com"
+    }
+  ],
+  "comentarios": [
+    {
+      "establecimientoId": "est5",
+      "usuario": "pablo",
+      "comentario": "buen sitio",
+      "id": 1
+    },
+    {
+      "establecimientoId": "est3",
+      "usuario": "paula12",
+      "comentario": "puerta estrecha",
+      "id": 2
+    }
+  ]
 }

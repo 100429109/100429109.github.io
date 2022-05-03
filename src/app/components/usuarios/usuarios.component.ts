@@ -3,6 +3,8 @@ import { DataService } from './../../services/data.service';
 import { Observable, of } from "rxjs";
 import { usuario } from '../../model/model.interface';
 import { RankingComponent } from '../ranking/ranking.component';
+import { randomBytes } from 'crypto';
+import { randomInt } from 'crypto';
 
 @Component({
   selector: 'app-usuarios',
@@ -38,6 +40,8 @@ export class UsuariosComponent implements OnInit {
   clickCrearUsuario() {
     this.datasrv.crearUsuario(this.usuario_actual.id, this.usuario_actual.name, this.usuario_actual.password, this.usuario_actual.email).subscribe(data => {
       this.nuevo_usuario = data;
+      console.log(this.usuarios)
+      console.log("data", data)
       this.refrescarUsuarios();
     });
   }
@@ -158,7 +162,7 @@ export class UsuariosComponent implements OnInit {
 
       if (repetido != true){
         
-        var datos = {id: this.usuarios.length, name: usuario, password: contraseña, email: correo};
+        var datos = {id: this.usuarios.length + 1, name: usuario, password: contraseña, email: correo};
         //this.datasrv.setUsuarios(datos);
         this.usuario_actual = datos;
         this.clickCrearUsuario();
