@@ -9,9 +9,12 @@ import { Observable } from "rxjs";
 @Injectable()
 export class DataService {
 
-  private urlEstablecimientos = "http://localhost:3000/establecimientos";
-  private urlComentarios = "http://localhost:3000/comentarios";
-  private urlUsuarios = "http://localhost:3000/usuarios";
+  //private urlEstablecimientos = "http://localhost:3000/establecimientos";
+  //private urlComentarios = "http://localhost:3000/comentarios";
+  //private urlUsuarios = "http://localhost:3000/usuarios";
+  private urlEstablecimientos = "http://212.170.107.165:3000/establecimientos";
+  private urlComentarios = "http://212.170.107.165:3000/comentarios";
+  private urlUsuarios = "http://212.170.107.165:3000/usuarios";
 
   constructor(private http: HttpClient) {}
 
