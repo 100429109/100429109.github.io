@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
     "@types/googlemaps": "^3.39.13",
+    "angular-cli-ghpages": "^1.0.0",
     "browserify-fs": "^1.0.0",
     "rxjs": "~7.5.0",
     "rxjs-compat": "^6.6.7",
